@@ -1,0 +1,19 @@
+<section class="flex justify-between mt-32 w-10/12 ">
+  <div class=" ml-20">
+<h1 class="font-extrabold h-32 text-transparent text-6xl bg-clip-text bg-gradient-to-r from-sky-300 to-sky-800">We are Ready <br/> to help You</h1>
+<p class="mt-5 text-lg text-cyan-800 font-medium">Your health is very important , If You have <br/>any health problem don't hesitate and contact<br/> the specialized doctor now.</p>
+<button [routerLink]="['HealthIssueComponent']" class="bg-gradient-to-b from-sky-300 to-sky-800 mt-5 drop-shadow-xl shadow-gray-400 hover:from-slate-50 hover:to-slate-200 hover:text-cyan-800 shadow-md text-white px-4 py-2.5 rounded-2xl font-medium">Submit health problem</button>
+<div class="flex mt-12">
+<p><span class="text-2xl font-bold">{{doctorsCount}}+</span><br/><span class="text-slate-500">Doctors</span></p>
+<p class="ml-14"><span class="text-2xl font-bold">{{usersCount}}+</span><br/><span class="text-slate-500">Users</span></p>
+<p class="ml-14"><span class="text-2xl font-bold">{{pharmacyCount}}+</span><br/><span class="text-slate-500">Pharmacy</span></p>
+</div>
+</div>
+<div class="absolute right-0">
+
+  <div class="relative ">
+    <img src="assets/health_effects.jpg" class="image1"   alt="health" />
+    <img src="assets/dr.jpg" alt="doctor" class=" image2 absolute scale-110 top-24 drop-shadow-2xl border-white border-8 right-16" />
+  </div>
+</div>
+</section>
