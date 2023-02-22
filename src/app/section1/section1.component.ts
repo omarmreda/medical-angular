@@ -28,4 +28,13 @@ pharmacyCountStop:any = setInterval(()=>{
     clearInterval(this.pharmacyCountStop);
   }
 },14)
+showPopup: boolean = false;
+
+  showForm() {
+    this.showPopup = true;
+  }
+
+  hideForm() {
+    this.showPopup = false;
+  }
 }

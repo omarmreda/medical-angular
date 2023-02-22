@@ -8,6 +8,9 @@ import { Section1Component } from './section1/section1.component';
 import { ServicesSectionComponent } from './services-section/services-section.component';
 import { HealthIssueComponent } from './health-issue/health-issue.component';
 import { ProductsComponent } from './products/products.component';
+import { OurDoctorsComponent } from './our-doctors/our-doctors.component';
+import { CarouselModule } from './carousel/carousel.module';
+import { PopUpFormComponent } from './pop-up-form/pop-up-form.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,14 @@ import { ProductsComponent } from './products/products.component';
     Section1Component,
     ServicesSectionComponent,
     HealthIssueComponent,
-    ProductsComponent
+    ProductsComponent,
+    OurDoctorsComponent,
+    PopUpFormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

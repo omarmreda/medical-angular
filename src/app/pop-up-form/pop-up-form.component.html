@@ -1,0 +1,19 @@
+<div class="form-wrapper w-96">
+  <button class="close-btn" (click)="onClose()">x</button>
+  <h2 class="text-center text-2xl font-bold mb-12">Enter your details</h2>
+  <form >
+    <label class="font-bold flex flex-col justify-between pb-3">
+      Name:
+      <input type="text" name="name" class="border border-black" placeholder="your name">
+    </label>
+    <label class="font-bold flex flex-col justify-between">
+      Email:
+      <input type="email" name="email" class="border border-black">
+    </label>
+    <label class="font-bold flex flex-col justify-between pb-3">
+      Health problems:
+      <textarea name="health-problems" class="border border-black"></textarea>
+    </label>
+    <button type="submit"  class="bg-gradient-to-b from-sky-300 to-sky-800 mt-5 drop-shadow-xl shadow-gray-400 hover:from-slate-50 hover:to-slate-200 hover:text-cyan-800 shadow-md text-white px-4 py-2.5 rounded-2xl font-medium">Submit</button>
+  </form>
+</div>

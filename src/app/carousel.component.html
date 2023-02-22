@@ -1,0 +1,26 @@
+<div class="mr-32" >
+  <div
+    *ngIf="images && images.length > 0"
+    class="carousel-container pl-24 bg-gradient-to-b from-sky-300 to-sky-700 overflow-hidden"
+  >
+    <img
+      *ngFor="let image of images; let i = index"
+      [src]="image.imageSrc"
+      [alt]="image.imageAlt"
+      [ngClass]="{ 'image-active': currentImageIndex === i }"
+      class="fade"
+    />
+    <div class="btn-prev btn-carousel"></div>
+  </div>
+  <div *ngIf="indicators" class="carousel-dot-container">
+    <span
+      class="dot"
+      *ngFor="let dot of images; let i = index"
+      class="dot"
+      [ngClass]="{ active: currentImageIndex === i }"
+      (click)="jumpToImage(i)"
+      [class.selected]="i === currentImageIndex"
+    >
+    </span>
+  </div>
+</div>
