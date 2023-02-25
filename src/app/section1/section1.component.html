@@ -12,13 +12,17 @@
       the specialized doctor now.
     </p>
     <button
-    (click)="showForm()"
+      (click)="showForm()"
       [routerLink]="['HealthIssueComponent']"
       class="bg-gradient-to-b from-sky-300 to-sky-800 mt-5 drop-shadow-xl shadow-gray-400 hover:from-slate-50 hover:to-slate-200 hover:text-cyan-800 shadow-md text-white px-4 py-2.5 rounded-2xl font-medium"
     >
       Submit health problem
     </button>
-    <app-pop-up-form *ngIf="showPopup" (formSubmit)="hideForm()" (formClose)='hideForm()'></app-pop-up-form>
+    <app-pop-up-form
+      *ngIf="showPopup"
+      (formSubmit)="hideForm()"
+      (formClose)="hideForm()"
+    ></app-pop-up-form>
     <div class="flex mt-12">
       <p>
         <span class="text-2xl font-bold"

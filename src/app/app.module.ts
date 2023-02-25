@@ -11,6 +11,8 @@ import { ProductsComponent } from './products/products.component';
 import { OurDoctorsComponent } from './our-doctors/our-doctors.component';
 import { CarouselModule } from './carousel/carousel.module';
 import { PopUpFormComponent } from './pop-up-form/pop-up-form.component';
+import { FooterComponent } from './footer/footer.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { PopUpFormComponent } from './pop-up-form/pop-up-form.component';
     HealthIssueComponent,
     ProductsComponent,
     OurDoctorsComponent,
-    PopUpFormComponent
+    PopUpFormComponent,
+    FooterComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
