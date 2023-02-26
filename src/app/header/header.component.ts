@@ -7,8 +7,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-constructor(private router : Router){}
-onButtonClick(){
-  this.router.navigate(['/login'])
-}
+constructor(){}
+
 }

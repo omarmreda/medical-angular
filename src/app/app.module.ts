@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -13,6 +13,9 @@ import { CarouselModule } from './carousel/carousel.module';
 import { PopUpFormComponent } from './pop-up-form/pop-up-form.component';
 import { FooterComponent } from './footer/footer.component';
 import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +28,16 @@ import { RegisterComponent } from './register/register.component';
     OurDoctorsComponent,
     PopUpFormComponent,
     FooterComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent,
+    SignupComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CarouselModule,
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
