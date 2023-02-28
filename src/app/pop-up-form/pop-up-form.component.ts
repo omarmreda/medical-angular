@@ -15,4 +15,8 @@ export class PopUpFormComponent {
   onClose() {
     this.formClose.emit();
   }
+  showMessage : boolean = false;
+  message(){
+      this.showMessage = true;
+  };
 }

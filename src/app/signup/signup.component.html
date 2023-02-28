@@ -1,1 +1,115 @@
-<p>signup works!</p>
+<div class="flex items-center justify-center h-screen bg-gray-100">
+    <form #f="ngForm">
+        <div class="bg-slate-50 w-96 p-6 rounded-lg shadow-lg">
+            <h3 class="text-center p-5 font-semibold text-xl text-gray-800">Register</h3>
+            <div class="flex">
+                <div>
+                    <label class="text-gray-700">First Name</label>
+                    <input
+                        ngModel
+                        #name="ngModel"
+                        name="fName"
+                        type="text"
+                        class="w-4/5 bg-gray-50 py-2  outline-none border-b border-gray-700"
+                        required
+                    />
+                    <div
+                        *ngIf="name.invalid && name.touched"
+                        class="font-thin text-xs bg-red-300 w-28 rounded-sm mt-2 px-1"
+                    >
+                        Name is required
+                    </div>
+                </div>
+                <div>
+                    <label class="ml-8 text-gray-700">Last Name</label>
+                    <input
+                        ngModel
+                        #lName="ngModel"
+                        name="lName"
+                        type="text"
+                        class="w-4/5 bg-gray-50 py-2 px-1 outline-none ml-8 border-b border-gray-700"
+                        required
+                    />
+                    <div
+                        *ngIf="lName.invalid && lName.touched"
+                        class="font-thin text-xs bg-red-300 w-28 rounded-sm mt-2 px-1 ml-8"
+                    >
+                        Name is required
+                    </div>
+                </div>
+            </div>
+            <label class="text-gray-700">Email</label>
+            <input
+                ngModel
+                name="email"
+                class="w-full py-2 bg-gray-50 text-gray-500 px-1 outline-none mb-4 border-b border-gray-700"
+                type="email"
+                required
+                email
+            />
+            <label class="text-gray-700">Password</label>
+            <input
+                ngModel
+                name="password"
+                class="w-full py-2 bg-gray-50 text-gray-500 px-1 outline-none mb-4 border-b border-gray-700"
+                #passwod="ngModel"
+                type="password"
+                required
+                minlength="6"
+            />
+            <label class="text-gray-700">Confirm Password</label>
+            <input
+                ngModel
+                name="passwordConfirm"
+                class="w-full py-2 bg-gray-50 text-gray-500 px-1 outline-none mb-4 border-b border-gray-700"
+                #passwordConfirm="ngModel"
+                type="password"
+                required
+            />
+            <div
+                class="font-thin text-xs bg-red-300 w-5/6 rounded-sm mt-2 px-1"
+                *ngIf="
+                    passwod.value !== passwordConfirm.value || passwod.touched
+                "
+            >
+                Passwords are not matching
+            </div>
+            <fieldset>
+                <legend class="text-gray-700">Gender:</legend>
+
+                <input
+                    ngModel
+                    name="gender"
+                    type="radio"
+                    name="gender"
+                    id="track"
+                    value="track"
+                    class="cursor-pointer"
+                /><label for="track" class="text-gray-700 ml-2">Male</label>
+                <input
+                    ngModel
+                    name="gender"
+                    type="radio"
+                    name="gender"
+                    id="event"
+                    value="event"
+                    class="ml-6 cursor-pointer"
+                /><label for="event" class="text-gray-700 ml-2">Female</label>
+            </fieldset>
+            <button
+                class="bg-blue-800 w-3/5 text-white py-2 mt-4 ml-16 rounded-lg hover:bg-red-600"
+                [disabled]="
+                    f.invalid || passwod.value !== passwordConfirm.value
+                "
+            >
+                Sign up
+            </button>
+            <div class="text-gray-600 text-sm mt-3">
+                Already have an account?
+                <a routerLink="/login" class="text-blue-700 cursor-pointer"
+                    >Login</a
+                >
+            </div>
+        </div>
+    </form>
+</div>

@@ -11,6 +11,7 @@ import { ProductsComponent } from './products/products.component';
 import { OurDoctorsComponent } from './our-doctors/our-doctors.component';
 import { CarouselModule } from './carousel/carousel.module';
 import { PopUpFormComponent } from './pop-up-form/pop-up-form.component';
+import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
@@ -38,6 +39,7 @@ import { HomePageComponent } from './home-page/home-page.component';
     AppRoutingModule,
     CarouselModule,
     RouterModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
