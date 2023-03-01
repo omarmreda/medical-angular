@@ -1,7 +1,9 @@
 <div class="flex items-center justify-center h-screen bg-gray-100">
-    <form #f="ngForm">
+    <form #f="ngForm" (ngSubmit)="signup(f)">
         <div class="bg-slate-50 w-96 p-6 rounded-lg shadow-lg">
-            <h3 class="text-center p-5 font-semibold text-xl text-gray-800">Register</h3>
+            <h3 class="text-center p-5 font-semibold text-xl text-gray-800">
+                Register
+            </h3>
             <div class="flex">
                 <div>
                     <label class="text-gray-700">First Name</label>
@@ -10,11 +12,11 @@
                         #name="ngModel"
                         name="fName"
                         type="text"
-                        class="w-4/5 bg-gray-50 py-2  outline-none border-b border-gray-700"
+                        class="w-4/5 bg-gray-50 py-2 outline-none border-b border-gray-700"
                         required
                     />
                     <div
-                        *ngIf="name.invalid && name.touched"
+                        [hidden]="name.valid || name.untouched"
                         class="font-thin text-xs bg-red-300 w-28 rounded-sm mt-2 px-1"
                     >
                         Name is required
@@ -31,7 +33,7 @@
                         required
                     />
                     <div
-                        *ngIf="lName.invalid && lName.touched"
+                        [hidden]="lName.valid || lName.untouched"
                         class="font-thin text-xs bg-red-300 w-28 rounded-sm mt-2 px-1 ml-8"
                     >
                         Name is required
@@ -42,11 +44,25 @@
             <input
                 ngModel
                 name="email"
-                class="w-full py-2 bg-gray-50 text-gray-500 px-1 outline-none mb-4 border-b border-gray-700"
+                class="form-control w-full py-2 bg-gray-50 text-gray-500 px-1 outline-none mb-4 border-b border-gray-700"
                 type="email"
                 required
                 email
+                #email="ngModel"
+
             />
+            <div
+                class="font-thin text-xs bg-red-300 w-5/6 rounded-sm mt-2 px-1"
+                *ngIf="email.invalid && email.touched"
+            >
+                Email is Required
+            </div>
+            <!-- <div
+                class="font-thin text-xs bg-red-300 w-5/6 rounded-sm mt-2 px-1"
+                *ngIf="f.controls.email.errors?.email && email.touched"
+            >
+             Invalid email format.
+            </div> -->
             <label class="text-gray-700">Password</label>
             <input
                 ngModel
@@ -69,7 +85,8 @@
             <div
                 class="font-thin text-xs bg-red-300 w-5/6 rounded-sm mt-2 px-1"
                 *ngIf="
-                    passwod.value !== passwordConfirm.value || passwod.touched
+                    passwod.value !== passwordConfirm.value ||
+                    passwordConfirm.touched
                 "
             >
                 Passwords are not matching
@@ -101,6 +118,7 @@
                 [disabled]="
                     f.invalid || passwod.value !== passwordConfirm.value
                 "
+                (clcik)="signup(f)"
             >
                 Sign up
             </button>
@@ -110,6 +128,8 @@
                     >Login</a
                 >
             </div>
+            <div *ngIf="errorMessage">This email adress is already in use</div>
         </div>
     </form>
+
 </div>

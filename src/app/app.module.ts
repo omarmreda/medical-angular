@@ -17,7 +17,8 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { HomePageComponent } from './home-page/home-page.component';
-
+import { AngularFireModule } from "@angular/fire/compat";
+import {AngularFireAuthModule} from '@angular/fire/compat/auth'
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +41,15 @@ import { HomePageComponent } from './home-page/home-page.component';
     CarouselModule,
     RouterModule,
     FormsModule,
+    AngularFireModule.initializeApp({
+      apiKey: "AIzaSyCNjvNxuKL2f_ht5qJgdg7-akUj4z29jNU",
+      authDomain: "angular-signup-602a2.firebaseapp.com",
+      projectId: "angular-signup-602a2",
+      storageBucket: "angular-signup-602a2.appspot.com",
+      messagingSenderId: "406421121508",
+      appId: "1:406421121508:web:ec92472e5b0604f43d7ff1"
+    }),
+    AngularFireAuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
