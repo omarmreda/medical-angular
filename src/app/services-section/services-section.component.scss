@@ -4,3 +4,15 @@
   --tw-shadow-color: #6b7280;
     --tw-shadow: var(--tw-shadow-colored);
 }
+@media (max-width:767px){
+.cards-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card{
+  margin:0;
+  margin-top: 2rem;
+}
+}

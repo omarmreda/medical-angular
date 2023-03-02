@@ -6,3 +6,8 @@
   border-top-left-radius: 13rem;
   border-top-right-radius: 13rem;
 }
+@media (max-width:767px) {
+  .imgs-container{
+    display: none;
+  }
+}

@@ -9,3 +9,12 @@
 .dr-img{
 bottom: 68px;
 }
+@media(max-width:767px){
+  .cards-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .dr-card{
+display: none;
+  }
+}

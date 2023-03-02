@@ -1,10 +1,20 @@
-<nav class="flex w-full h-16  border-b-2 items-center">
+<nav class="flex w-full h-16  border-b-2 items-center fixed top-0 z-40 bg-slate-50">
   <a class="ml-20 font-bold text-2xl text-slate-800 cursor-pointer">Medical</a>
-  <ul class="flex ml-80">
-    <li class="cursor-pointer hover:text-red-500 text-lg text-slate-500 ml-12"><a href="#section1">Home</a></li>
+  <ul class="flex ml-80 nav-ul web-nav">
+    <li class="cursor-pointer hover:text-red-500 text-lg text-slate-500 ml-"><a href="#section1">Home</a></li>
     <li class="cursor-pointer hover:text-red-500 text-lg text-slate-500 ml-12"><a href="#main-services">Main Services</a></li>
     <li class="cursor-pointer hover:text-red-500 text-lg text-slate-500 ml-12"><a href="#special-services">Special Services</a></li>
     <li class="cursor-pointer hover:text-red-500 text-lg text-slate-500 ml-12"><a href="#doctors">Doctors</a></li>
   </ul>
-  <button class="text-white bg-gradient-to-b from-sky-300 to-sky-800 py-1.5 px-3 rounded-3xl cursor-pointer text-md ml-72 drop-shadow-md" ><a routerLink="/login">Register</a></button>
+  <button class="text-white bg-gradient-to-b from-sky-300 to-sky-800 py-1.5 px-3 rounded-3xl cursor-pointer text-md ml-72 drop-shadow-md register hover:bg-gradient-to-b hover:from-sky-800 hover:to-sky-300 transititon" routerLink="/login" >Register</button>
+<ul class="mobile-nav" [ngClass]="status ? 'is-active' : 'mobile-nav' ">
+  <li class="cursor-pointer hover:text-red-500 text-lg text-slate-500 "><a href="#section1">Home</a></li>
+  <li class="cursor-pointer hover:text-red-500 text-lg text-slate-500 "><a href="#main-services">Main Services</a></li>
+  <li class="cursor-pointer hover:text-red-500 text-lg text-slate-500 "><a href="#special-services">Special Services</a></li>
+  <li class="cursor-pointer hover:text-red-500 text-lg text-slate-500 "><a href="#doctors">Doctors</a></li>
+  <li class="cursor-pointer hover:text-red-500 text-lg text-slate-500 "><a routerLink="/login">Register</a></li>
+</ul>
+  <button class=" hamburger" (click)="handleClick()" [ngClass]="status ? 'is-active' : 'hamburger' ">
+    <div class="bar"></div>
+  </button>
 </nav>

@@ -6,9 +6,9 @@
       >Main Services</span
     ><br />Categories
   </h2>
-  <div class="flex justify-center mt-28">
+  <div class="flex justify-center mt-28 cards-container">
     <div
-  class="w-96 bg-slate-200 px-8 py-12 rounded-2xl cursor-pointer flex-col justify-center drop-shadow-lg shadow-lg shadow-blue-300"
+  class="w-96 bg-slate-200 px-8 py-12 rounded-2xl cursor-pointer flex-col justify-center drop-shadow-lg shadow-lg shadow-blue-300 card"
 
   (mouseenter)="isMiddleActive = false"
 >
@@ -19,7 +19,7 @@
   </p>
 </div>
 <div
-  class="w-96  bg-slate-200  px-8 py-12 rounded-2xl cursor-pointer flex-col justify-center ml-10 ddrop-shadow-lg shadow-lg shadow-blue-300 "
+  class="w-96  bg-slate-200  px-8 py-12 rounded-2xl cursor-pointer flex-col justify-center ml-10 ddrop-shadow-lg shadow-lg shadow-blue-300 card "
   (mouseenter)="isMiddleActive = true"
   [ngClass]="{'active': isMiddleActive}"
 >
@@ -30,7 +30,7 @@
   </p>
 </div>
 <div
-  class="w-96 bg-slate-200 px-8 py-12 rounded-2xl cursor-pointer flex-col justify-center ml-10 drop-shadow-lg shadow-lg shadow-blue-300"
+  class="w-96 bg-slate-200 px-8 py-12 rounded-2xl cursor-pointer flex-col justify-center ml-10 drop-shadow-lg shadow-lg shadow-blue-300 card"
   (mouseenter)="isMiddleActive = false"
 >
   <img src="assets/hospital.png" alt="doctor" class="w-3/5" />

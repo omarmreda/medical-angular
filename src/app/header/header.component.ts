@@ -8,5 +8,9 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
 constructor(){}
+status : boolean = false;
 
+handleClick(){
+  this.status = !this.status
+}
 }
