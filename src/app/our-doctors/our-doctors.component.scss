@@ -28,3 +28,25 @@
 .left-side-container{
   width: 35rem;
 }
+@media (max-width:767px){
+  #doctors{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20rem;
+  }
+  .container{
+    margin: 0;
+    width: 80%;
+  }
+  .opening-card{
+    display: block;
+    width:80%;
+    margin: 0 auto;
+  }
+  .carousel{
+    width:80%;
+    margin:20px auto;
+  }
+}
