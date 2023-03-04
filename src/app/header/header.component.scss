@@ -33,12 +33,15 @@
 }
 
 @media (max-width:767px){
+  .icon-name{
+    margin-left:10px;
+  }
   .hamburger{
     display: block;
   }
   .mobile-nav{
     position: fixed;
-    top:0;
+    top:-7px;
     left: 100%;
     width:100%;
     display: block;
@@ -46,6 +49,7 @@
     z-index: 99;
     background-color: rgb(247, 247, 247);
     transition: 0.4s;
+    height:100vh;
   }
   .mobile-nav li{
     display: block;

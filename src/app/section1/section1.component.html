@@ -1,7 +1,7 @@
 <section class="flex justify-between mt-48 w-10/12" id="section1">
-  <div class="ml-20">
+  <div class="md:ml-20 ml-4 container">
     <h1
-      class="font-extrabold h-32 text-transparent text-6xl bg-clip-text bg-gradient-to-r from-sky-300 to-sky-800"
+      class="font-extrabold h-32 text-transparent text-6xl bg-clip-text bg-gradient-to-r from-sky-300 to-sky-800 title"
     >
       We are Ready <br />
       to help You
@@ -23,25 +23,25 @@
       (formSubmit)="hideForm()"
       (formClose)="hideForm()"
     ></app-pop-up-form>
-    <div class="flex mt-12">
+    <div class="flex md:mt-12 mt-6">
       <p>
-        <span class="text-2xl font-bold"
+        <span class="md:text-2xl text-xl font-bold"
           >{{ doctorsCount }}<span class="text-cyan-800">+</span></span
         ><br /><span class="text-slate-500">Doctors</span>
       </p>
-      <p class="ml-14">
-        <span class="text-2xl font-bold"
+      <p class="md:ml-14 ml-7">
+        <span class="md:text-2xl text-xl font-bold"
           >{{ usersCount }}<span class="text-cyan-800">+</span></span
         ><br /><span class="text-slate-500">Users</span>
       </p>
-      <p class="ml-14">
-        <span class="text-2xl font-bold"
+      <p class="md:ml-14 ml-7">
+        <span class="md:text-2xl text-xl font-bold"
           >{{ pharmacyCount }}<span class="text-cyan-800">+</span></span
         ><br /><span class="text-slate-500">Pharmacy</span>
       </p>
     </div>
   </div>
-  <div class="absolute top-64 right-0 imgs-container">
+  <div class="absolute top-64 right-0 imgs-container md:w-1/4">
     <div class="relative">
       <img src="assets/health_effects.jpg" class="image1" alt="health" />
       <img
