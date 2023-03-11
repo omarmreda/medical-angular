@@ -1,14 +1,38 @@
 <div class="flex items-center justify-center h-screen bg-gray-100">
-<form>
-
-  <div class="bg-slate-50 w-96 p-6 rounded-lg shadow-lg">
-    <h3 class="text-center p-5 font-semibold text-xl">Login</h3>
-    <label class="text-gray-700 ">Email</label>
-    <input class="w-full py-2 bg-gray-50 text-gray-500 px-1 outline-none mb-4 border-b border-gray-700" type="email" />
-    <label class="text-gray-700 ">Password</label>
-    <input class="w-full py-2 bg-gray-50 text-gray-500 px-1 outline-none mb-4 border-b border-gray-700" type="password" />
-    <button class="bg-blue-800 w-3/5 text-white py-2 ml-16 rounded-lg">Login</button>
-    <div class="text-gray-600 text-sm mt-3">New to the platform? <a routerLink="/sign-up" class="text-blue-700 cursor-pointer">Sign up</a></div>
-  </div>
-</form>
+    <form #f="ngForm" (ngSubmit)="login(f)">
+        <div class="bg-slate-50 w-96 p-6 rounded-lg shadow-lg">
+            <h3 class="text-center p-5 font-semibold text-xl">Login</h3>
+            <label class="text-gray-700">Email</label>
+            <input
+                ngModel
+                name="email"
+                class="w-full py-2 bg-gray-50 text-gray-500 px-1 outline-none mb-4 border-b border-gray-700"
+                type="email"
+                email
+                required
+                #email="ngModel"
+            />
+            <label class="text-gray-700">Password</label>
+            <input
+                ngModel
+                #pasword="ngModel"
+                required
+                minlength="6"
+                class="w-full py-2 bg-gray-50 text-gray-500 px-1 outline-none mb-4 border-b border-gray-700"
+                type="password"
+            />
+            <button
+                class="bg-blue-800 w-3/5 text-white py-2 ml-16 rounded-lg"
+                (click)="login(f)"
+            >
+                Login
+            </button>
+            <div class="text-gray-600 text-sm mt-3">
+                New to the platform?
+                <a routerLink="/sign-up" class="text-blue-700 cursor-pointer"
+                    >Sign up</a
+                >
+            </div>
+        </div>
+    </form>
 </div>

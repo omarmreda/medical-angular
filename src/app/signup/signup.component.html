@@ -85,7 +85,7 @@
             <div
                 class="font-thin text-xs bg-red-300 w-5/6 rounded-sm mt-2 px-1"
                 *ngIf="
-                    passwod.value !== passwordConfirm.value ||
+                    passwod.value != passwordConfirm.value &&
                     passwordConfirm.touched
                 "
             >
@@ -128,7 +128,7 @@
                     >Login</a
                 >
             </div>
-            <div *ngIf="errorMessage">This email adress is already in use</div>
+            <div *ngIf="errorMessage" class="bg-red-300 mt-2">This email adress is already in use</div>
         </div>
     </form>
 
